@@ -1,4 +1,4 @@
-#include "moNa.dtsi"
+#include "tany.dtsi"
 
 &kscan0 {
         col-gpios
