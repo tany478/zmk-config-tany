@@ -18,30 +18,16 @@
     combos {    
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;   //押したとき実行されるコマンド
+        esc {
+            bindings = <&kp ESC>;   //押したとき実行されるコマンド
             key-positions = <11 12>;    //押すキーの位置
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
+        caps {
+            bindings = <&kp CAPS>;
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
     };
 
     //マクロ(既存のキーの組み合わせ)
@@ -65,10 +51,10 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        mouse_scroll: mouse_wheel_scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };
@@ -82,33 +68,41 @@
 
         default_layer { //デフォルトレイヤー(レイヤー0)
             bindings = <
-            &kp Q             &kp W     &lt 5 E       &kp R     &kp T                                                                       &kp Y        &kp U            &kp I         &kp O       &kp P
-            &kp A             &kp S     &kp D       &kp F     &kp G        &kp MINUS                                                        &kp H        &kp J            &kp K         &kp L       &kp ENTER
-            &mt LEFT_SHIFT Z  &kp X     &kp C       &kp V     &kp B        &kp COLON                         &kp SEMICOLON                  &kp N        &kp M            &kp COMMA     &kp PERIOD  &mt LEFT_SHIFT SLASH
-            &kp LCTRL                                         &lt 2 SPACE  &lt_to_layer_0 4 INT_MUHENKAN     &lt_to_layer_0 3 INT_HENKAN    &lt 1 SPACE  &kp BACKSPACE    &kp DEL       &kp LEFT_WIN  &kp LEFT_ALT
+            &kp Q         &kp W      &lt 5 E      &lt 3 R     &kp T                                                       &kp Y        &kp U        &lt 4 I      &kp O       &kp P
+            &kp A         &mt LALT S &mt LESHFT D &mt LCTRL F &kp G        &tog 6                                         &kp H        &mt RCTRL J  &mt RSHFT K  &mt RALT L  &kp BACKSPACE
+            &kp Z         &kp X      &kp C        &kp V       &kp B        &tog 4                   &kp TAB               &kp N        &kp M        &kp COMMA    &kp PERIOD  &kp MINUS
+            &mt LWIN INT5                                     &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 1 LANG1                            &tog 3      &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings =
+                <&mouse_scroll SCROLL_UP SCTOLL_DOWN>,
+                <&mouse_scroll SCROLL_LEFT SCTOLL_RIGHT>;
         };
 
         layer_1 {   //レイヤー1の時の設定
             bindings = <
-            &kp ESCAPE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(COMMA)         &kp  LS(PERIOD)                          &trans  &kp HOME        &kp UP_ARROW    &kp END          &trans
-            &trans      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
-            &trans      &trans            &trans             &trans                &trans                 &trans    &trans  &trans  &kp DEL         &kp PAGE_UP     &kp PAGE_DOWN    &kp BACKSLASH
-            &trans                                                                 &trans                 &trans    &trans  &trans  &trans       &trans       &trans        &kp PIPE
+            &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                     &kp INT3  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
+            &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans             &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp BACKSPACE
+            &trans     &kp GRAVE &kp CORON &kp SEMI &kp BSLH  &trans    &kp TAB  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp EQAL
+            &trans                                  &trans    &trans    &trans   &trans                         &trans    &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings =
+                <&mouse_scroll SCROLL_UP SCTOLL_DOWN>,
+                <&mouse_scroll SCROLL_LEFT SCTOLL_RIGHT>; 
         };
 
         layer_2 {   //レイヤー2の時の設定
             bindings = <
-            &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp MINUS    &kp EQUAL
-            &kp 1            &kp 2        &kp 3     &kp 4       &kp 5        &kp UNDERSCORE               &kp 6      &kp 7          &kp 8         &kp 9        &kp 0
-            &kp F1           &kp F2       &kp F3    &kp F4      &kp F5       &kp F11             &kp F12  &kp F6     &kp F7         &kp F8        &kp F9       &kp F10
-            &trans                                              &trans       &trans              &trans   &trans     &trans         &trans        &trans       &trans
+            &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQAL  &kp 7  &kp 8  &kp 9   &kp ASTRK
+            &kp F11  &kp F6  &kp F5  &kp F4  &kp LT     &trans             &kp MINUS &kp 4  &kp 5  &kp 6   &kp PLUS
+            &kp F10  &kp F3  &kp F2  &kp F1  &kp GT     &trans    &kp DOT  &kp 0     &kp 1  &kp 2  &kp 3   &kp SLASH
+            &kp PSCRN                        &trans     &trans    &trans   &trans                  &trans  &kp KOMMA
             >;
+
+            sensor-bindings =
+                <&mouse_scroll SCROLL_UP SCTOLL_DOWN>,
+                <&mouse_scroll SCROLL_LEFT SCTOLL_RIGHT>;
         };
 
         layer_3 {    //レイヤー3の時の設定
@@ -116,7 +110,7 @@
             &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                         &trans  &trans  &trans  &trans  &trans
             &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans                &trans  &trans  &trans  &trans  &trans
             &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
-            &trans                                                                           &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
+            &trans                                                                           &trans   &trans        &trans  &trans                  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -127,7 +121,7 @@
             &trans  &trans  &kp LC(LS(TAB))         &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &trans  &trans             &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-            &trans                                                           &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+            &trans                                                           &trans  &trans     &trans  &trans                  &trans  &trans
             >;
 
         };
@@ -137,16 +131,16 @@
             &trans  &trans        &trans        &trans        &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
             &trans  &trans        &trans        &trans        &trans  &trans                 &trans        &trans        &trans        &trans        &trans
             &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-            &trans                                            &trans  &trans    &trans       &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+            &trans                                            &trans  &trans    &trans       &trans                                    &trans        &bt BT_CLR_ALL
             >;
         };
 
         MOUSE {     //レイヤー6の時の設定(マウスレイヤー)
             bindings = <
-            &trans  &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-            &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans            &trans  &trans  &trans  &trans  &trans
-            &trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            &trans                                &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            &trans    &trans    &trans    &trans    &trans                      &trans  &trans  &trans  &trans  &trans
+            &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB5  &trans            &trans  &trans  &trans  &trans  &trans
+            &trans    &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            &trans                                  &trans    &trans    &trans  &trans                  &trans  &trans
             >;
         };
     };
