@@ -83,7 +83,7 @@
             bindings = <
             &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                     &kp INT3  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
             &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans             &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp BACKSPACE
-            &trans     &kp GRAVE &kp CORON &kp SEMI &kp BSLH  &trans    &kp TAB  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp EQAL
+            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &kp TAB  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp EQAL
             &trans                                  &trans    &trans    &trans   &trans                         &trans    &kp DEL
             >;
 
