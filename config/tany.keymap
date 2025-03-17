@@ -20,19 +20,14 @@
 
         esc {
             bindings = <&kp ESC>;   //押したとき実行されるコマンド
-            key-positions = <01 02>;    //押すキーの位置
+            key-positions = <11 12>;    //押すキーの位置
         };
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <07 16>;
+            key-positions = <12 13>;
         };
-        
-       sclk {
-            bindings = <&kp SCLK>;
-            key-positions = <08 07>;
-        };
-
+    
     };
 
     //マクロ(既存のキーの組み合わせ)
@@ -76,12 +71,12 @@
             &kp Q                 &kp W      &lt 5 E     &kp R       &kp T                                                       &kp Y        &kp U        &lt 4 I      &kp O       &kp P
             &kp A                 &mt LALT S &mt LSHFT D &mt LCTRL F &kp G        &tog 6                                         &kp H        &mt RCTRL J  &mt RSHFT K  &mt RALT L  &kp BACKSPACE
             &kp Z                 &kp X      &kp C       &kp V       &kp B        &tog 4                   &kp TAB               &kp N        &kp M        &kp COMMA    &kp PERIOD  &kp MINUS
-            &mt LWIN INT_MUHENKAN                                    &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                            &tog 2      &kp DEL
+            &mt LWIN INT5                                    &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                            &tog 2      &kp DEL
             >;
 
             sensor-bindings =
                 <&mouse_scroll SCRL_UP SCRL_DOWN>,
-                <&mouse_scroll SCRL_UP SCRL_DOWN>;
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_1 {   //レイヤー1の時の設定
@@ -93,7 +88,7 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>,
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
                 <&mouse_scroll SCRL_LEFT SCRL_RIGHT>; 
         };
 
@@ -102,12 +97,12 @@
             &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQUAL  &kp 7  &kp 8  &kp 9  &kp ASTRK
             &kp F11  &kp F6  &kp F5  &kp F4  &kp LT     &trans             &kp MINUS  &kp 4  &kp 5  &kp 6  &kp PLUS
             &kp F10  &kp F3  &kp F2  &kp F1  &kp GT     &trans    &kp DOT  &kp 0      &kp 1  &kp 2  &kp 3  &kp SLASH
-            &kp PSCRN                        &trans     &trans    &trans   &trans                                   &trans        &kp COMMA
+            &kp PSCRN                        &trans     &trans    &trans   &trans                   &trans &kp COMMA
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_3 {    //レイヤー3の時の設定
