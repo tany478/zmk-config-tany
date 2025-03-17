@@ -26,8 +26,8 @@
         caps {
             bindings = <&kp CAPS>;
             key-positions = <07 16>;
-
         };
+        
        sclk {
             bindings = <&kp SCLK>;
             key-positions = <08 07>;
