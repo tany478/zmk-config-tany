@@ -99,9 +99,9 @@
 
         layer_2 {   //レイヤー2の時の設定
             bindings = <
-            &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQUAL       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTRK
-            &kp F11  &kp F6  &kp F5  &kp F4  &kp LT     &trans             &kp MINUS       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS
-            &kp F10  &kp F3  &kp F2  &kp F1  &kp GT     &trans    &kp DOT  &kp KP_NUMBER_0 &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SLASH
+            &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQUAL  &kp 7  &kp 8  &kp 9  &kp ASTRK
+            &kp F11  &kp F6  &kp F5  &kp F4  &kp LT     &trans             &kp MINUS  &kp 4  &kp 5  &kp 6  &kp PLUS
+            &kp F10  &kp F3  &kp F2  &kp F1  &kp GT     &trans    &kp DOT  &kp 0      &kp 1  &kp 2  &kp 3  &kp SLASH
             &kp PSCRN                        &trans     &trans    &trans   &trans                                   &trans        &kp COMMA
             >;
 
