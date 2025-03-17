@@ -32,6 +32,7 @@
             bindings = <&kp SCLK>;
             key-positions = <08 07>;
         };
+
     };
 
     //マクロ(既存のキーの組み合わせ)
@@ -79,8 +80,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>,
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {   //レイヤー1の時の設定
@@ -105,8 +106,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll LEFT SCRL_RIGHT>,
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_3 {    //レイヤー3の時の設定
@@ -137,6 +138,7 @@
             &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
             &trans                                            &trans  &trans    &trans       &trans                                    &trans        &bt BT_CLR_ALL
             >;
+            
         };
 
         MOUSE {     //レイヤー6の時の設定(マウスレイヤー)
