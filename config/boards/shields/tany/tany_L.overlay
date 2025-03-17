@@ -54,3 +54,7 @@
         scroll-layers = <4>;
     };
 };
+
+&left_encoder {
+    status = "okay";
+};
