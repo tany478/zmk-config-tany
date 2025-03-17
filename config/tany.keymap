@@ -83,7 +83,7 @@
             bindings = <
             &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                     &kp INT3  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
             &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans             &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp BACKSPACE
-            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &kp TAB  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp EQAL
+            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &kp TAB  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp EQUAL
             &trans                                  &trans    &trans    &trans   &trans                         &trans    &kp DEL
             >;
 
@@ -94,7 +94,7 @@
 
         layer_2 {   //レイヤー2の時の設定
             bindings = <
-            &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQAL  &kp 7  &kp 8  &kp 9   &kp ASTRK
+            &kp F12  &kp F9  &kp F8  &kp F7  &kp CARET                     &kp EQUAL  &kp 7  &kp 8  &kp 9   &kp ASTRK
             &kp F11  &kp F6  &kp F5  &kp F4  &kp LT     &trans             &kp MINUS &kp 4  &kp 5  &kp 6   &kp PLUS
             &kp F10  &kp F3  &kp F2  &kp F1  &kp GT     &trans    &kp DOT  &kp 0     &kp 1  &kp 2  &kp 3   &kp SLASH
             &kp PSCRN                        &trans     &trans    &trans   &trans                  &trans  &kp KOMMA
