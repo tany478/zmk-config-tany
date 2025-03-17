@@ -75,8 +75,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCROLL_UP SCROLL_DOWN>,
-                <&mouse_scroll SCROLL_LEFT SCROLL_RIGHT>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_1 {   //レイヤー1の時の設定
@@ -88,8 +88,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCROLL_UP SCROLL_DOWN>,
-                <&mouse_scroll SCROLL_LEFT SCROLL_RIGHT>; 
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>; 
         };
 
         layer_2 {   //レイヤー2の時の設定
@@ -101,8 +101,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCROLL_UP SCROLL_DOWN>,
-                <&mouse_scroll SCROLL_LEFT SCROLL_RIGHT>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_3 {    //レイヤー3の時の設定
