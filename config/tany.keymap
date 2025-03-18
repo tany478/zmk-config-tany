@@ -29,7 +29,7 @@
         };
     
         scrolllock {
-            bindings = <&kp SCROLLLOCK>;
+            bindings = <&kp KP_SCROLLLOCK>;
             key-positions = <08 07>;
         }
     };
