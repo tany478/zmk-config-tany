@@ -28,6 +28,10 @@
             key-positions = <07 16>;
         };
     
+        scrolllock {
+            bindings = <&kp SCROLLLOCK>;
+            key-positions = <08 07>;
+        }
     };
 
     //マクロ(既存のキーの組み合わせ)
