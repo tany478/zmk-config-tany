@@ -20,7 +20,7 @@
 
         esc {
             bindings = <&kp ESC>;   //押したとき実行されるコマンド
-            key-positions = <11 12>;    //押すキーの位置
+            key-positions = <01 02>;    //押すキーの位置
         };
 
         caps {
