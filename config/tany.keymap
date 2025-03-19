@@ -43,6 +43,11 @@
             key-positions = <36 35>;
         };
 
+    slck {
+            bindings = <&kp SLCK>;
+            key-positions = <21 31>;
+        }; 
+
     };
 
     //マクロ(既存のキーの組み合わせ)
