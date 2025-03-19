@@ -25,7 +25,7 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <21 31>;
+            key-positions = <02 03>;
         };
     
         mb1 {
@@ -90,8 +90,8 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCRL_UP SCRL_DOWN>,
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
+                <&scroll_up_down>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_1 {   //レイヤー1の時の設定
