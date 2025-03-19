@@ -30,9 +30,13 @@
     
         tab {
             bindings = <&kp TAB>;
-            key-positions = <17 15>;
+            key-positions = <07 05>;
         };         
 
+    shift_tab {
+            bindings = <&kp SHIFT_TAB>;
+            key-positions = <17 15>;
+        };
     };
 
     //マクロ(既存のキーの組み合わせ)
