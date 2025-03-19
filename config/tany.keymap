@@ -42,9 +42,9 @@
             bindings = <&kp MB2>;
             key-positions = <36 35>;
         };
-           
-    slck {
-            bindings = <&kp KC_SLCK>;
+
+    lslck {
+            bindings = <&kp KC_LSLCK>;
             key-positions = <21 31>;
         }; 
 
