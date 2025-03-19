@@ -28,6 +28,21 @@
             key-positions = <02 03>;
         };
     
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <08 07>;
+        };
+
+        shift tab {
+            bindings = <&kp SHIFT_TAB>;
+            key-positions = <09 08>;
+        };
+
+        mb2 {
+            bindings = <&kp MB2>;
+            key-positions = <25 35>;
+        };
+    
     };
 
     //マクロ(既存のキーの組み合わせ)
