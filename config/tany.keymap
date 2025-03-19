@@ -86,7 +86,7 @@
             &kp Q                 &kp W      &lt 5 E     &kp R       &kp T                                                       &kp Y        &kp U        &lt 4 I      &kp O       &kp P
             &kp A                 &kp S      &mt LSHFT D &mt LCTRL F &kp G        &tog 6                                         &kp H        &mt RCTRL J  &mt RSHFT K  &kp L       &kp MINUS
             &mt LALT Z            &kp X      &kp C       &kp V       &kp B        &tog 4                   &kp BACKSPACE         &kp N        &kp M        &kp COMMA    &kp PERIOD  &kp MB1
-            &mt LWIN INT_MUHENKAN                                    &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                            &tog 2      &kp SLOCK
+            &mt LWIN INT_MUHENKAN                                    &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                            &tog 2      &kp SLCK
             >;
 
             sensor-bindings =
