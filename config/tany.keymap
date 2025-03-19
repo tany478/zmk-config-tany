@@ -30,7 +30,7 @@
     
         tab {
             bindings = <&kp TAB>;
-            key-positions = <07 08>;
+            key-positions = <07 05>;
         };
      
     
