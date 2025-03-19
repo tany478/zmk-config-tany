@@ -38,10 +38,15 @@
             key-positions = <17 15>;
         };
 
-     mb2 {
+    mb2 {
             bindings = <&kp MB2>;
             key-positions = <36 35>;
-        };   
+        };
+           
+    slck {
+            bindings = <&kp KC_SLCK>;
+            key-positions = <21 31>;
+        }; 
 
     };
 
