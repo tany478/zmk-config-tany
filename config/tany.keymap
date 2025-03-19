@@ -34,7 +34,7 @@
         };         
 
     shift_tab {
-            bindings = <&s (TAB)>;
+            bindings = <&kp (TAB)>;
             key-positions = <17 15>;
         };
     };
