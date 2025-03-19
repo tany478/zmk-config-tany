@@ -96,10 +96,10 @@
 
         layer_1 {   //レイヤー1の時の設定
             bindings = <
-            &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                      &kp BSLH  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
-            &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans              &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp MINUS
-            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &kp trans &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp DOT
-            &trans                                  &trans    &trans    &trans    &trans                         &trans    &kp EQUAL
+            &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                    &kp BSLH  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
+            &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans            &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp MINUS
+            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &trans  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp DOT
+            &trans                                  &trans    &trans    &trans  &trans                         &trans    &kp EQUAL
             >;
 
             sensor-bindings =
