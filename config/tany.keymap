@@ -25,22 +25,22 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <02 03>;
+            key-positions = <21 31>;
         };
     
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <03 13>;
+        mb1 {
+            bindings = <&mkp MB1>;
+            key-positions = <10 11>;
         };         
 
-        shift_tab {
-            bindings = <&kp (TAB)>;
-            key-positions = <22 23>;
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <11 12>;
         }; 
 
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <21 31>;
+        sclk {
+            bindings = <&kp SCLK>;
+            key-positions = <03 13>;
         }; 
 
     };
@@ -83,10 +83,10 @@
 
         default_layer { //デフォルトレイヤー(レイヤー0)
             bindings = <
-            &kp Q                 &kp W      &lt 5 E     &kp R       &kp T                                                       &kp Y        &kp U        &lt 4 I      &kp O       &kp P
-            &kp A                 &kp S      &mt LSHFT D &mt LCTRL F &kp G        &tog 6                                         &kp H        &mt RCTRL J  &mt RSHFT K  &kp L       &kp MINUS
-            &mt LALT Z            &kp X      &kp C       &kp V       &kp B        &kp SLCK                 &kp BACKSPACE         &kp N        &kp M        &kp COMMA    &kp PERIOD  &kp MB1
-            &mt LWIN INT_MUHENKAN                                    &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                            &tog 2      &kp MB2
+            &kp Q                 &kp W      &lt 5 E &kp R       &kp T                                                       &kp Y        &kp U        &lt 4 I   &kp O       &kp P
+            &kp A                 &kp S      &kp D   &mt LSHFT F &mt LCTRL G  &tog 6                                         &mt RCTRL H  &mt RSHFT J  &kp K     &kp L       &kp MINUS
+            &mt LALT Z            &kp X      &kp C   &kp V       &kp B        &tog 4                   &kp BACKSPACE         &kp N        &kp M        &kp COMMA &kp PERIOD  &kp TAB
+            &mt LWIN INT_MUHENKAN                                &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                         &tog 2      &kp DEL
             >;
 
             sensor-bindings =
@@ -98,8 +98,8 @@
             bindings = <
             &kp QMARK  &kp DQT   &kp EXCL  &trans   &kp PIPE                    &kp BSLH  &kp UNDER  &kp LPAR  &kp RPAR  &kp PRCNT
             &kp AT     &kp SQT   &kp DLLR  &trans   &kp FSLH  &trans            &kp HASH  &trans     &kp LBKT  &kp RBKT  &kp MINUS
-            &trans     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &trans  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp DOT
-            &trans                                  &trans    &trans    &trans  &trans                         &trans    &kp EQUAL
+            &kp LT     &kp GRAVE &kp COLON &kp SEMI &kp BSLH  &trans    &trans  &kp TILDE &kp AMPS   &kp LBRC  &kp RBRC  &kp DOT
+            &kp GT                                  &trans    &trans    &trans  &trans                         &trans    &kp EQUAL
             >;
 
             sensor-bindings =
