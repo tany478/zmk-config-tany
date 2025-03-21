@@ -70,7 +70,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
             tap-ms = <20>;
         };
 
@@ -89,9 +88,7 @@
             &mt LWIN INT_MUHENKAN                                &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                         &tog 2      &kp DEL
             >;
 
-            sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_1 {   //レイヤー1の時の設定
