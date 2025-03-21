@@ -88,7 +88,8 @@
             &mt LWIN INT_MUHENKAN                                &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                         &tog 2      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = 
+                <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_1 {   //レイヤー1の時の設定
@@ -100,8 +101,7 @@
             >;
 
             sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>; 
+                <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_2 {   //レイヤー2の時の設定
