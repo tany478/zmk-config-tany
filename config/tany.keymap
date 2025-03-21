@@ -66,13 +66,11 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
         };
-
 
     };
 
@@ -89,7 +87,8 @@
             >;
 
             sensor-bindings = 
-                <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_1 {   //レイヤー1の時の設定
@@ -101,7 +100,8 @@
             >;
 
             sensor-bindings =
-                <&scroll_up_down &inc_dec_kp C_VOL_DN C_VOL_UP>;
+                <&rot_kp PG_UP PG_DN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_2 {   //レイヤー2の時の設定
@@ -113,7 +113,7 @@
             >;
 
             sensor-bindings =
-                <&scroll_up_down>,
+                <&rot_kp C_BRI_DEC C_BRI_INC>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
@@ -155,6 +155,11 @@
             &trans    &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans    &trans    &trans    &trans
             &trans                                  &trans    &trans    &trans  &trans                        &trans    &trans
             >;
+
+           sensor-bindings =
+                <&scroll_up_down>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            
         };
     };
 };
