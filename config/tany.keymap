@@ -145,10 +145,6 @@
             &trans                                                           &trans  &trans     &trans  &trans                  &trans  &trans
             >;
 
-            sensor-bindings = 
-                <&rot_kp C_WH_UP C_WH_DOWN>,
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-
         };
 
         layer_5 {   //レイヤー5の時の設定
