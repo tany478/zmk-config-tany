@@ -146,7 +146,7 @@
             >;
 
             sensor-bindings = 
-                <&rot_kp KC_WH_UP KC_WH_DOWN>,
+                <&rot_KC　WH_UP WH_DOWN>,
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
         };
