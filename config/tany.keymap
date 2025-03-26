@@ -30,17 +30,17 @@
     
         mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
         };         
 
         mb2 {
             bindings = <&mkp MB2>;
-            key-positions = <11 12>;
+            key-positions = <07 17>;
         }; 
 
-        sclk {
-            bindings = <&kp SCLK>;
-            key-positions = <03 13>;
+        slck {
+            bindings = <&kp SLCK>;
+            key-positions = <16 26>;
         }; 
 
     };
@@ -76,7 +76,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
             tap-ms = <20>;
         };
     };
