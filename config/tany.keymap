@@ -25,7 +25,7 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <26 25>;
+            key-positions = <07 08>;
         };
     
         mb1 {
