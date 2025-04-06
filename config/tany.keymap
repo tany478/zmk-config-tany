@@ -47,7 +47,7 @@
         };
 
         combo_backspace {
-            key-positions = <17 18>;
+            key-positions = <18 19>;
             bindings = <&kp BACKSPACE>;
         };
 
