@@ -32,13 +32,13 @@
         };
 
         combo_caps {
-            key-positions = <10 11>;
+            key-positions = <11 12>;
             bindings = <&kp CAPS>;
         };
 
-        combo_tab {
-            key-positions = <11 12>;
-            bindings = <&kp TAB>;
+        combo_tog3 {
+            key-positions = <3 4>;
+            bindings = <&tog 3>;
         };
 
         combo_slck {
@@ -46,9 +46,14 @@
             bindings = <&kp SLCK>;
         };
 
-        combo_backspace {
+        combo_mb1 {
             key-positions = <18 19>;
-            bindings = <&kp BACKSPACE>;
+            bindings = <&mkp MB1>;
+        };
+
+        combo_mb2 {
+            key-positions = <28 29>;
+            bindings = <&mkp MB2>;
         };
 
     };
@@ -94,10 +99,10 @@
 
         default_layer { //デフォルトレイヤー(レイヤー0)
             bindings = <
-            &kp Q                 &kp W      &lt 5 E &kp R       &kp T                                                       &kp Y        &kp U        &lt 4 I   &kp O       &kp P
-            &kp A                 &kp S      &kp D   &mt LSHFT F &mt LCTRL G  &tog 6                                         &mt RCTRL H  &mt RSHFT J  &kp K     &kp L       &kp MINUS
-            &mt LALT Z            &kp X      &kp C   &kp V       &kp B        &tog 4                   &mkp MB1              &kp N        &kp M        &kp COMMA &kp PERIOD  &mkp MB2
-            &mt LWIN INT_MUHENKAN                                &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                         &tog 2      &mt RALT DEL
+            &kp Q           &kp W  &lt 5 E  &kp R        &kp T                                                       &kp Y        &kp U        &lt 4 I   &kp O       &kp P
+            &kp A           &kp S  &kp D    &mt LSHFT F  &mt LCTRL G  &tog 6                                         &mt RCTRL H  &mt RSHFT J  &kp K     &kp L       &kp MINUS
+            &mt LWIN Z      &kp X  &kp C    &kp V        &kp B        &tog 4                   &kp BACKSPACE         &kp N        &kp M        &kp COMMA &kp PERIOD  &kp TAB
+            &mt LALT PSCRN                               &lt 2 LANG2  &lt_to_layer_0 1 SPACE   &lt_to_layer_0 1 RET  &lt 3 LANG1                         &tog 2      &mt RALT DEL
             >;
 
             sensor-bindings = 
