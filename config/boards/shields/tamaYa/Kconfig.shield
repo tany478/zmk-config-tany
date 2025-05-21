@@ -1,0 +1,5 @@
+config SHIELD_TAMAYA_R
+    def_bool $(shields_list_contains,tamaYa_R)
+
+config SHIELD_TAMAYA_L
+    def_bool $(shields_list_contains,tamaya_L)

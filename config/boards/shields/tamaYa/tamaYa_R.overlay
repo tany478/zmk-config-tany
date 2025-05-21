@@ -1,4 +1,4 @@
-#include "tany.dtsi"
+#include "tamaYa.dtsi"
 
 &default_transform {
     col-offset = <5>;

@@ -1,8 +1,8 @@
 file_format: "1"
-id: tany
-name: tany
+id: tamaYa
+name: tamaYa
 type: shield
-url: https://github.com/tany478/zmk-config-tany
+url: https://github.com/tany478/zmk-config-tamaYa
 requires: [seeeduino_xiao_ble]
 features:
   - keys

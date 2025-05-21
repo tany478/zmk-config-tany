@@ -1,7 +1,7 @@
-if SHIELD_TANY_L
+if SHIELD_TAMAYA_L
 
 config ZMK_KEYBOARD_NAME
-    default "tany_L"
+    default "tamaYa_L"
 
 config ZMK_SPLIT
     default y
@@ -11,10 +11,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_TANY_R
+if SHIELD_TAMAYA_R
 
 config ZMK_KEYBOARD_NAME
-    default "tany_R"
+    default "tamaYa_R"
 
 config ZMK_SPLIT
     default y
