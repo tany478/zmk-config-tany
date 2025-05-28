@@ -1,0 +1,5 @@
+config SHIELD_TANY_R
+    def_bool $(shields_list_contains,tany_R)
+
+config SHIELD_TANY_L
+    def_bool $(shields_list_contains,tany_L)
